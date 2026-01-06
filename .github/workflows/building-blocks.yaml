@@ -1,16 +1,18 @@
-name: Building Blocks
+name: new test workflow
 on: push
 
 jobs:
-    echo-hello:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Say Hello
-              run: echo "Hello, world!"
+  test-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: testing this step
+        run: echo "Ran successfully"
+      
+      - name: testing failed step
+        run: |
+          exit 1
+          echo "failed"
 
-    echo-goodbye:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Failed step
-              run: |
-                exit 1
+      - name: testing another step
+        run: echo "Ran successfully"
+
