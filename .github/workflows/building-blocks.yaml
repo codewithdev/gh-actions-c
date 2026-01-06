@@ -10,7 +10,7 @@ jobs:
       
       - name: testing failed step
         run: |
-          exit 1
+          exit 0
           echo "failed"
 
       - name: testing another step
